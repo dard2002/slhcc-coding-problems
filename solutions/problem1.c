@@ -16,12 +16,7 @@ typedef struct {
 } Apple;
 
 int main() {
-    Apple* apples = malloc(10 * sizeof(Apple));
-
-    if( !apples ) {
-        printf("Memory allocation failed\n");
-        return 1;
-    }
+    Apple apples[10];
 
     for ( int i = 0; i < 10; ++i ) {
         if(i % 2 == 0) {
@@ -34,9 +29,6 @@ int main() {
         
         printf("Apple id %d with Color %d\n", apples[i].id, apples[i].color);
     }
-
-    free(apples);
-    apples = NULL;
-
+    
     return 0;
 }
