@@ -18,6 +18,7 @@ int main() {
         if(i == 10) {
             m = realloc(m, 20 * sizeof(Message));
         }
+        
         m[i].value = message;
         printf("%s\n", m[i].value);
     }

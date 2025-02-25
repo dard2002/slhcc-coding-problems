@@ -19,13 +19,8 @@ int main() {
     Apple apples[10];
 
     for ( int i = 0; i < 10; ++i ) {
-        if(i % 2 == 0) {
-            apples[i].color = RED;
-        } else {
-            apples[i].color = GREEN;
-        }
-
         apples[i].id = i + 1;
+        apples[i].color = i % 2 ? RED : GREEN;
         
         printf("Apple id %d with Color %d\n", apples[i].id, apples[i].color);
     }
